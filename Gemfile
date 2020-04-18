@@ -27,7 +27,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+# font-awesome-rails provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
+gem "font-awesome-rails"
+# # Select2 is a jQuery based replacement for select boxes.
+# gem "select2-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -36,6 +39,8 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'better_errors', '~> 2.6'
+  gem 'binding_of_caller', '~> 0.8.0'
 end
 
 group :test do

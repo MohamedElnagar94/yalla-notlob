@@ -1,0 +1,25 @@
+
+  <%= link_to 'New order', new_order_path , class: "btn btn-primary ml-3" %>
+
+<table class="table    table-hover" style="text-align:center">
+  <thead class="thead-dark">
+    <tr>
+        <th>order_for</th>
+        <th>resturant_name</th>
+        <th>firend</th>
+        <th>picture</th>
+        <th colspan='3'>operation</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= order.order_for %></td>
+          <td><%= order.resturant_name %></td>
+          <td><%= order.firend %></td>
+          <td><%= order.picture %></td>
+        
+        </tr>
+      <% end %>
+    </tbody>
+</table>

@@ -1,8 +1,10 @@
+<%= content_for :page_title,"orders" %>
+<%= render 'navbar/navbar' %>
 <h1>New Orders</h1>
 <h2>Add order</h2>
 
-<%= form_with scope: :order, url: orders_path, local: true do |form| %>
-
+<%= form_with scope: :order, url: orders_path,   local: true do |form| %>
+  
     <p>
       <%= form.label :order_for %><br>
       <%= form.select :order_for, [ 'breakfast', 'lunch', 'dinner'] %>
@@ -21,7 +23,8 @@
 
     <p>
         <%= form.label :picture %><br>
-        <%= form.file_field :picture %>
+        <%= form.file_field :image %>
+        
     </p>
 
     <p>

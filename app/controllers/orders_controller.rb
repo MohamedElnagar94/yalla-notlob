@@ -38,6 +38,6 @@ class OrdersController < ApplicationController
   private
   def order_params
    
-    params.require(:order).permit(:order_for, :resturant_name, :firend, :picture)
+    params.require(:order).permit(:order_for, :resturant_name, :firend, :image)
   end
 end

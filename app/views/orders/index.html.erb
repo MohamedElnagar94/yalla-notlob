@@ -1,5 +1,6 @@
-
-  <%= link_to 'New order', new_order_path , class: "btn btn-primary ml-3" %>
+<%= content_for :page_title,"orders" %>
+<%= render 'navbar/navbar' %>
+  <%= link_to 'New order', new_order_path , class: "btn btn-primary ml-3 mt-5 mb-4" %>
 
 <table class="table    table-hover" style="text-align:center">
   <thead class="thead-dark">
@@ -17,7 +18,7 @@
           <td><%= order.order_for %></td>
           <td><%= order.resturant_name %></td>
           <td><%= order.firend %></td>
-          <td><%= order.picture %></td>
+          <td><%= image_tag(order.image , :class => "img_preview") %></td>
         
         </tr>
       <% end %>

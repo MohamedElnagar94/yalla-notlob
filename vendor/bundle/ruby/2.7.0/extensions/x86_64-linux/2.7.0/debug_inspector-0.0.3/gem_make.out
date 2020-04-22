@@ -1,0 +1,15 @@
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-1yw40jx.rb extconf.rb
+creating Makefile
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug_inspector.so ./.gem.20200419-9429-l34vj8

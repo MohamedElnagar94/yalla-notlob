@@ -1,0 +1,7 @@
+<div class="container-fluid offset-4 col-4 mt-5">
+    <p class="text-center h4">Welcome <%= @email %>!</p>
+
+    <p class="text-center h4">You can confirm your account email through the link below:</p>
+
+    <p class="text-center h4"><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+</div>

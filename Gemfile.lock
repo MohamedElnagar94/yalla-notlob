@@ -96,10 +96,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.9.0)
-
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-
     ffi (1.12.2)
     ffi (1.12.2-x64-mingw32)
     font-awesome-rails (4.7.0.5)

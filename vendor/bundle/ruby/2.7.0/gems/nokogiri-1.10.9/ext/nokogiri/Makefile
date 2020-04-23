@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
 topdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
 hdrdir = $(topdir)
 arch_hdrdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/usr/local/rvm/rubies/ruby-2.7.1
+=======
+topdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
+hdrdir = $(topdir)
+arch_hdrdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/home/eslam/.rvm/rubies/ruby-2.7.1
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20200419-10791-1sp225r
 sitelibdir = $(DESTDIR)./.gem.20200419-10791-1sp225r
+=======
+sitearchdir = $(DESTDIR)./.gem.20200419-9429-1x6rrv5
+sitelibdir = $(DESTDIR)./.gem.20200419-9429-1x6rrv5
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -55,7 +69,11 @@ includedir = $(prefix)/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
+<<<<<<< HEAD
 sysconfdir = $(prefix)/etc
+=======
+sysconfdir = $(DESTDIR)/etc
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -65,12 +83,21 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
+<<<<<<< HEAD
 CC = gcc -std=gnu99
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+=======
+CC = gcc
+CXX = g++
+LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
+LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -81,13 +108,21 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = 
 optflags = -O3
 debugflags = -ggdb3
+<<<<<<< HEAD
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+=======
+warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 cppflags = 
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
+<<<<<<< HEAD
 CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/include/libxml2 -I/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include -I/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/include/libxml2  $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"0001-Revert-Do-not-URI-escape-in-server-side-includes.patch 0002-Remove-script-macro-support.patch 0003-Update-entities-to-remove-handling-of-ssi.patch 0004-libxml2.la-is-in-top_builddir.patch 0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+=======
+CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -I/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/include/libxml2 -I/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include -I/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/include/libxml2  $(DEFS) $(cppflags) "-DNOKOGIRI_LIBXML2_PATH=\"/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"0001-Revert-Do-not-URI-escape-in-server-side-includes.patch 0002-Remove-script-macro-support.patch 0003-Update-entities-to-remove-handling-of-ssi.patch 0004-libxml2.la-is-in-top_builddir.patch 0005-Fix-infinite-loop-in-xmlStringLenDecodeEntities.patch\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic
 dldflags = -Wl,--compress-debug-sections=zlib 
@@ -115,8 +150,13 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir --ignore-fail-on-non-empty -p
+<<<<<<< HEAD
 MAKEDIRS = /usr/bin/mkdir -p
 INSTALL = /usr/bin/install -c
+=======
+MAKEDIRS = /bin/mkdir -p
+INSTALL = /usr/bin/install
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -125,8 +165,13 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
+<<<<<<< HEAD
 libpath = . $(libdir) /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
 LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib -Wl,-rpath,/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib -L/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib -Wl,-rpath,/tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+=======
+libpath = . $(libdir) /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib -Wl,-rpath,/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib -L/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib -Wl,-rpath,/home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -137,11 +182,19 @@ extout =
 extout_prefix = 
 target_prefix = /nokogiri
 LOCAL_LIBS = 
+<<<<<<< HEAD
 LIBS = $(LIBRUBYARG_SHARED) /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.a -lm -ldl -lz /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib/libxml2.a /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.a -ldl -lm -lz /tmp/bundler20200419-10791-k3vepinokogiri-1.10.9/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib/libxml2.a -lm   -lc 
 ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
 SRCS = $(ORIG_SRCS) 
 OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
 HDRS = $(srcdir)/html_document.h $(srcdir)/html_element_description.h $(srcdir)/html_entity_lookup.h $(srcdir)/html_sax_parser_context.h $(srcdir)/html_sax_push_parser.h $(srcdir)/nokogiri.h $(srcdir)/xml_attr.h $(srcdir)/xml_attribute_decl.h $(srcdir)/xml_cdata.h $(srcdir)/xml_comment.h $(srcdir)/xml_document.h $(srcdir)/xml_document_fragment.h $(srcdir)/xml_dtd.h $(srcdir)/xml_element_content.h $(srcdir)/xml_element_decl.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xml_entity_decl.h $(srcdir)/xml_entity_reference.h $(srcdir)/xml_io.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_namespace.h $(srcdir)/xml_node.h $(srcdir)/xml_node_set.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_reader.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_sax_parser.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/xml_schema.h $(srcdir)/xml_syntax_error.h $(srcdir)/xml_text.h $(srcdir)/xml_xpath_context.h $(srcdir)/xslt_stylesheet.h
+=======
+LIBS = $(LIBRUBYARG_SHARED) /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.a -lm -ldl -lz /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib/libxml2.a /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.a -ldl -lm -lz /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/lib/libxml2.a -lm   -lc 
+ORIG_SRCS = html_document.c html_element_description.c html_entity_lookup.c html_sax_parser_context.c html_sax_push_parser.c nokogiri.c xml_attr.c xml_attribute_decl.c xml_cdata.c xml_comment.c xml_document.c xml_document_fragment.c xml_dtd.c xml_element_content.c xml_element_decl.c xml_encoding_handler.c xml_entity_decl.c xml_entity_reference.c xml_io.c xml_libxml2_hacks.c xml_namespace.c xml_node.c xml_node_set.c xml_processing_instruction.c xml_reader.c xml_relax_ng.c xml_sax_parser.c xml_sax_parser_context.c xml_sax_push_parser.c xml_schema.c xml_syntax_error.c xml_text.c xml_xpath_context.c xslt_stylesheet.c
+SRCS = $(ORIG_SRCS) 
+OBJS = html_document.o html_element_description.o html_entity_lookup.o html_sax_parser_context.o html_sax_push_parser.o nokogiri.o xml_attr.o xml_attribute_decl.o xml_cdata.o xml_comment.o xml_document.o xml_document_fragment.o xml_dtd.o xml_element_content.o xml_element_decl.o xml_encoding_handler.o xml_entity_decl.o xml_entity_reference.o xml_io.o xml_libxml2_hacks.o xml_namespace.o xml_node.o xml_node_set.o xml_processing_instruction.o xml_reader.o xml_relax_ng.o xml_sax_parser.o xml_sax_parser_context.o xml_sax_push_parser.o xml_schema.o xml_syntax_error.o xml_text.o xml_xpath_context.o xslt_stylesheet.o
+HDRS = $(srcdir)/xml_element_decl.h $(srcdir)/xml_reader.h $(srcdir)/xml_encoding_handler.h $(srcdir)/xml_sax_parser.h $(srcdir)/xml_dtd.h $(srcdir)/xml_sax_push_parser.h $(srcdir)/html_element_description.h $(srcdir)/xml_element_content.h $(srcdir)/html_document.h $(srcdir)/xml_relax_ng.h $(srcdir)/xml_node_set.h $(srcdir)/xml_io.h $(srcdir)/xml_schema.h $(srcdir)/xml_cdata.h $(srcdir)/xml_entity_reference.h $(srcdir)/xslt_stylesheet.h $(srcdir)/xml_comment.h $(srcdir)/xml_processing_instruction.h $(srcdir)/xml_xpath_context.h $(srcdir)/xml_syntax_error.h $(srcdir)/xml_namespace.h $(srcdir)/nokogiri.h $(srcdir)/xml_attr.h $(srcdir)/xml_document_fragment.h $(srcdir)/xml_attribute_decl.h $(srcdir)/xml_entity_decl.h $(srcdir)/html_sax_parser_context.h $(srcdir)/html_sax_push_parser.h $(srcdir)/html_entity_lookup.h $(srcdir)/xml_document.h $(srcdir)/xml_libxml2_hacks.h $(srcdir)/xml_sax_parser_context.h $(srcdir)/xml_node.h $(srcdir)/xml_text.h
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 LOCAL_HDRS = 
 TARGET = nokogiri
 TARGET_NAME = nokogiri

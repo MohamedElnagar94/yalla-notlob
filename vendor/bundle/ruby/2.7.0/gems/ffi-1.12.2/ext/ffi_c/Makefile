@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
 topdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
 hdrdir = $(topdir)
 arch_hdrdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/usr/local/rvm/rubies/ruby-2.7.1
+=======
+topdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
+hdrdir = $(topdir)
+arch_hdrdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/home/eslam/.rvm/rubies/ruby-2.7.1
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20200419-10791-jm4xk4
 sitelibdir = $(DESTDIR)./.gem.20200419-10791-jm4xk4
+=======
+sitearchdir = $(DESTDIR)./.gem.20200419-9429-z0a981
+sitelibdir = $(DESTDIR)./.gem.20200419-9429-z0a981
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -55,7 +69,11 @@ includedir = $(prefix)/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
+<<<<<<< HEAD
 sysconfdir = $(prefix)/etc
+=======
+sysconfdir = $(DESTDIR)/etc
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -65,12 +83,21 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
+<<<<<<< HEAD
 CC = gcc -std=gnu99
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+=======
+CC = gcc
+CXX = g++
+LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
+LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -115,8 +142,13 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir --ignore-fail-on-non-empty -p
+<<<<<<< HEAD
 MAKEDIRS = /usr/bin/mkdir -p
 INSTALL = /usr/bin/install -c
+=======
+MAKEDIRS = /bin/mkdir -p
+INSTALL = /usr/bin/install
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -141,7 +173,11 @@ LIBS = $(LIBRUBYARG_SHARED) -lffi  -lffi -lm   -lc
 ORIG_SRCS = AbstractMemory.c ArrayType.c Buffer.c Call.c ClosurePool.c DynamicLibrary.c Function.c FunctionInfo.c LastError.c LongDouble.c MappedType.c MemoryPointer.c MethodHandle.c Platform.c Pointer.c Struct.c StructByValue.c StructLayout.c Thread.c Type.c Types.c Variadic.c ffi.c
 SRCS = $(ORIG_SRCS) 
 OBJS = AbstractMemory.o ArrayType.o Buffer.o Call.o ClosurePool.o DynamicLibrary.o Function.o FunctionInfo.o LastError.o LongDouble.o MappedType.o MemoryPointer.o MethodHandle.o Platform.o Pointer.o Struct.o StructByValue.o StructLayout.o Thread.o Type.o Types.o Variadic.o ffi.o
+<<<<<<< HEAD
 HDRS = $(srcdir)/AbstractMemory.h $(srcdir)/ArrayType.h $(srcdir)/Call.h $(srcdir)/ClosurePool.h $(srcdir)/DynamicLibrary.h $(srcdir)/Function.h $(srcdir)/LastError.h $(srcdir)/LongDouble.h $(srcdir)/MappedType.h $(srcdir)/MemoryPointer.h $(srcdir)/MethodHandle.h $(srcdir)/Platform.h $(srcdir)/Pointer.h $(srcdir)/Struct.h $(srcdir)/StructByValue.h $(srcdir)/Thread.h $(srcdir)/Type.h $(srcdir)/Types.h $(srcdir)/compat.h $(srcdir)/rbffi.h $(srcdir)/rbffi_endian.h $(srcdir)/extconf.h
+=======
+HDRS = $(srcdir)/extconf.h $(srcdir)/LongDouble.h $(srcdir)/Call.h $(srcdir)/StructByValue.h $(srcdir)/Pointer.h $(srcdir)/Types.h $(srcdir)/Platform.h $(srcdir)/Thread.h $(srcdir)/rbffi_endian.h $(srcdir)/rbffi.h $(srcdir)/AbstractMemory.h $(srcdir)/MappedType.h $(srcdir)/Struct.h $(srcdir)/Function.h $(srcdir)/compat.h $(srcdir)/ArrayType.h $(srcdir)/DynamicLibrary.h $(srcdir)/ClosurePool.h $(srcdir)/LastError.h $(srcdir)/MemoryPointer.h $(srcdir)/Type.h $(srcdir)/MethodHandle.h
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 LOCAL_HDRS = 
 TARGET = ffi_c
 TARGET_NAME = ffi_c

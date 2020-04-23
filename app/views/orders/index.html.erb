@@ -17,26 +17,21 @@
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <th scope="row">1</th>
-    <td>Breakfast</td>
-    <td>Mac</td>
-    <td>10</td>
-    <td>waiting...</td>
-    <td>
+
+  <% @orders.each do |order| %>
+    <tr>
+      <th scope="row">1</th>
+      <td>Breakfast</td>
+      <td><%= order.resturant_name %></td>
+      <td>10</td>
+      <td>waiting...</td>
+      <td>
         <input type="button" class="btn btn-outline-success" value="View" />
         <input type="button" class="btn btn-outline-warning" value="Finish" />
         <input type="button" class="btn btn-outline-danger" value="Cancel" />
-    </td>
-  </tr>
-  <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-  </tr>
+      </td>
+    </tr>
+  <% end %>
 </tbody>
 </table>
 </div>

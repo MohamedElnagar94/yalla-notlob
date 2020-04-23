@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 current directory: /tmp/bundler20200419-10791-8nfv9qffi-1.12.2/gems/ffi-1.12.2/ext/ffi_c
 /usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-npg816.rb extconf.rb
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/ffi-1.12.2/ext/ffi_c
+/home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-v1ugwq.rb extconf.rb
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 checking for ffi_call() in -lffi... yes
 checking for ffi_closure_alloc()... yes
 checking for shlwapi.h... no
@@ -12,10 +17,17 @@ checking for ffi_prep_raw_closure()... yes
 creating extconf.h
 creating Makefile
 
+<<<<<<< HEAD
 current directory: /tmp/bundler20200419-10791-8nfv9qffi-1.12.2/gems/ffi-1.12.2/ext/ffi_c
 make "DESTDIR=" clean
 
 current directory: /tmp/bundler20200419-10791-8nfv9qffi-1.12.2/gems/ffi-1.12.2/ext/ffi_c
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/ffi-1.12.2/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/ffi-1.12.2/ext/ffi_c
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 make "DESTDIR="
 compiling AbstractMemory.c
 compiling ArrayType.c
@@ -42,6 +54,12 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.so
 
+<<<<<<< HEAD
 current directory: /tmp/bundler20200419-10791-8nfv9qffi-1.12.2/gems/ffi-1.12.2/ext/ffi_c
 make "DESTDIR=" install
 /usr/bin/install -c -m 0755 ffi_c.so ./.gem.20200419-10791-jm4xk4
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/ffi-1.12.2/ext/ffi_c
+make "DESTDIR=" install
+/usr/bin/install -m 0755 ffi_c.so ./.gem.20200419-9429-z0a981
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca

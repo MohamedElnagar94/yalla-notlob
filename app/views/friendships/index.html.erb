@@ -31,7 +31,6 @@
 
 <body>
     <%= render 'navbar/navbar' %>
-    <p id="notice"><%= notice %></p>
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -45,18 +44,6 @@
                     </div>
               </div>
             </div>
-
-
-            <%# <div class="row">
-                <div class="form-inline w-100">
-                    <div class="form-group col-md-9 mb-2">
-                        <label for="friend_friend_email" class="col-md-4 font-weight-bold">Your friend email</label>
-                        <input type="text" name="freind[freind_email]" id="friend_friend_email"
-                            class="form-control col-md-8 w-100 inputFriend" placeholder="Email" autofocus="true">
-                    </div>
-                    <button type="submit" class="btn btn-primary col-md-3 mb-2 buttonAddFriend">Add Friend</button>
-                </div>
-            </div> %>
 
             <div class="row mt-4">
                 <div class="col-sm-12">
@@ -75,12 +62,12 @@
                                                           style="width:70px;height:55px" alt="فى هنا صوره يا محمود">
                                                   </div>
                                                   <div style="display: grid">
-                                                      <h4>Name:</h4>
-                                                      <span><%= friendship.friend.name %></span>
-                                                      <h4>Email:</h4>
-                                                      <span><%= friendship.friend.email %></span>
-                                                      <%= link_to 'Show', friendship %>
-                                                      <%= link_to 'Destroy', friendship, method: :delete, data: { confirm: 'Are you sure?' } %>
+                                                      <div>Name: <span><%= friendship.friend.name %></span></div>
+                                                      <div>Email: <span><%= friendship.friend.email %></span></div>
+                                                      <div>
+                                                        <%= link_to 'Show', friendship ,class:"btn btn-primary "  %>
+                                                        <%= link_to 'Unfriend', friendship, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-warning "%>
+                                                      </div>
                                                   </div>
                                               </div>
                                           </div>

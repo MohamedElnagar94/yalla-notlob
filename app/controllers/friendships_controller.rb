@@ -12,7 +12,6 @@ class FriendshipsController < ApplicationController
   # GET /friendships/1
   # GET /friendships/1.json
   def show
-    # render plain: @friendship.inspect
   end
 
   # GET /friendships/new
@@ -41,7 +40,7 @@ class FriendshipsController < ApplicationController
         @friendship = current_user.friendships.build({friend_id: user_res.id})
         respond_to do |format|
           if @friendship.save
-            format.html { redirect_to @friendship, notice: 'Friendship was successfully created.' }
+            format.html { redirect_to friendships_path, notice: 'Friendship was successfully created.' }
             format.json { render :show, status: :created, location: @friendship }
           else
             format.html { render :new }
@@ -49,10 +48,14 @@ class FriendshipsController < ApplicationController
           end
         end
       else
-        render 'new'
+        respond_to do |format|
+          format.html { redirect_to friendships_path, notice: 'User already exists.' }
+        end
       end
     else
-      render plain params: :email
+      respond_to do |format|
+        format.html { redirect_to friendships_path, notice: 'There is no user with this email.' }
+      end
     end
   end
 
@@ -86,8 +89,4 @@ class FriendshipsController < ApplicationController
       @friendship = Friendship.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    # def friendship_params
-    #   params.require(:friendship).permit(:friend_id, :create, :destroy)
-    # end
 end

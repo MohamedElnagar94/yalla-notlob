@@ -21,9 +21,9 @@
   <% @orders.each do |order| %>
     <tr>
       <th scope="row">1</th>
-      <td>Breakfast</td>
+      <td><%= order.order_for %></td>
       <td><%= order.resturant_name %></td>
-      <td>10</td>
+      <td></td>
       <td>waiting...</td>
       <td>
         <input type="button" class="btn btn-outline-success" value="View" />

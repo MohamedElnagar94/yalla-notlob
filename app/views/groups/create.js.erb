@@ -1,0 +1,61 @@
+$("#add_group_form").on("ajax:complete", function (event, data, status) {
+//    console.log(data, event, status)
+    $('.AllGroups').html("<%= j (render partial: 'groups/result') %>")
+    // $(".AllGroups").html(data.responseText);
+//    let groupValue = $(".inputGroup");
+    // let component = $(".groups").clone(true);
+    // component.removeClass("groups d-none").find(".groupName").text(groupValue.val());
+    // AllGroups.append(component);
+//    groupValue.val("");
+//    checkGroupCount = AllGroups.children()[0].childElementCount;
+//    if (checkGroupCount > 2) {
+//        noGroups.addClass("d-none")
+//    }
+});
+
+//$("#add_group_form").on("ajax:complete", function (event, data, status) {
+//    let buttonGroupAdd = $(".buttonAddGroup");
+//    let AllGroups = $(".AllGroups");
+//    let deleteGroup = $(".deleteGroup");
+//    let noGroups = $(".noGroups");
+//    let addFriends = $(".addFriends");
+//    let checkGroupCount = AllGroups.children()[0].childElementCount;
+//    if(checkGroupCount <= 2){
+//        noGroups.removeClass("d-none")
+//    }
+//    $.ajax({
+//        url: "/groups.json",
+//        method: "get",
+//        data: {"email": email, "password": password},
+//        dataType: "json",
+//        success: function (result) {
+//            console.log(result)
+//            result.forEach(function (value,index) {
+//                console.log(value.group_name)
+//                let component = $(".groups").clone(true);
+//                component.removeClass("groups d-none").find(".groupName").text(value.group_name);
+//                component.find(".deleteGroup").attr("href",`/groups/${value.id}`)
+//                AllGroups.append(component);
+
+//            })
+//            let groupValue = $(".inputGroup");
+//            groupValue.val("");
+//            checkGroupCount = AllGroups.children()[0].childElementCount;
+//            if (checkGroupCount > 2) {
+//                noGroups.addClass("d-none")
+//            }
+//        },
+//        error: function (error) {
+//            console.log(error)
+//        }
+//    });
+//    let groupValue = $(".inputGroup");
+//    let component = $(".groups").clone(true);
+//    component.removeClass("groups d-none").find(".groupName").text(groupValue.val());
+//    AllGroups.append(component);
+//    groupValue.val("");
+//    checkGroupCount = AllGroups.children()[0].childElementCount;
+//    if (checkGroupCount > 2) {
+//        noGroups.addClass("d-none")
+//    }
+//});

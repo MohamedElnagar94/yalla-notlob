@@ -1,0 +1,13 @@
+<%= form_with(model: Group,remote: true,method: :post,id: "add_group_form", local: true) do |form| %>
+    <%#= form_tag groups_path,remote: true,method: :post,id: "add_group_form" do %>
+    <div class="row">
+        <div class="form-inline w-100">
+            <div class="form-group col-md-9 mb-2">
+                <%= label_tag(:group_name, "Group", {class:"col-md-4 font-weight-bold"}) %>
+                <%= text_field :group_name,:group_name,{class:"form-control col-md-8 w-100 inputGroup", placeholder: "Name Of Group"} %>
+            </div>
+            <%#= link_to 'Add Group', groups_path,remote: true,class: 'btn btn-primary col-md-3 mb-2 buttonAddGroup' %>
+            <%= button_to "Add Group","group_name",{type: "button",name: "add_group",class:"btn btn-primary col-md-3 mb-2 buttonAddGroup"} %>
+        </div>
+    </div>
+<% end  %>

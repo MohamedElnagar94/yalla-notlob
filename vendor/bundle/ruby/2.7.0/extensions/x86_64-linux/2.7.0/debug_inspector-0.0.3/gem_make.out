@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-1wzfrbfdebug_inspector-0.0.3/gems/debug_inspector-0.0.3/ext/debug_inspector
+/usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-19db0jf.rb extconf.rb
+creating Makefile
+
+current directory: /tmp/bundler20200419-10791-1wzfrbfdebug_inspector-0.0.3/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20200419-10791-1wzfrbfdebug_inspector-0.0.3/gems/debug_inspector-0.0.3/ext/debug_inspector
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-1yw40jx.rb extconf.rb
+creating Makefile
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-1wzfrbfdebug_inspector-0.0.3/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.so ./.gem.20200419-10791-10c6jue
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug_inspector.so ./.gem.20200419-9429-l34vj8
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca

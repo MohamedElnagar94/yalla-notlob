@@ -1,0 +1,38 @@
+<% if @user_group %>
+    <div class="card border-primary">
+        <div class="card-body">
+            <div class="card-header"><%= @user_group.group_name %></div>
+            <div class="mt-4 d-md-flex">
+                <div class="col-md-4">
+                    <table class="table table-hover table-bordered text-center table-fixed">
+                        <thead class="w-100">
+                        <tr>
+                            <th scope="col" class="w-100">Select To Add Friends</th>
+                        </tr>
+                        </thead>
+                        <tbody class="w-100">
+                        <% @friends.each { |friend| %>
+                            <tr class="friendUserList" id="<%= friend.id %>" data-group="<%= @user_group.id %>">
+                                <td class="w-100">
+                                    <a class="addFriendsToGroup" data-remote="true" rel="nofollow" data-method="post" href="<%= group_friends_path(:friends => { :friendship_id => friend.id,:group_id => @user_group.id}) %>"><%= friend.name %></a>
+                                </td>
+                            </tr>
+                        <% } %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-8">
+                    <div class="row renderFriends" style="overflow-y: auto;max-height: 240px">
+                        <%= render "group_friends/groupFriends" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% else %>
+    <div class="card border-primary">
+        <div class="card-body">
+            Select one of groups to show the friends
+        </div>
+    </div>
+<% end %>

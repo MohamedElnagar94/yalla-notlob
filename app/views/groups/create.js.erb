@@ -1,14 +1,15 @@
 $("#add_group_form").on("ajax:complete", function (event, data, status) {
-//    console.log(data, event, status)
     $('.AllGroups').html("<%= j (render partial: 'groups/result') %>")
-    // $(".AllGroups").html(data.responseText);
+//    $(".inputGroup").val("");
+//    setTimeout(function(){
+
+//        $(".inputGroup").val("");
+//    },2000)
 //    let groupValue = $(".inputGroup");
-    // let component = $(".groups").clone(true);
-    // component.removeClass("groups d-none").find(".groupName").text(groupValue.val());
-    // AllGroups.append(component);
-//    groupValue.val("");
-//    checkGroupCount = AllGroups.children()[0].childElementCount;
-//    if (checkGroupCount > 2) {
+//    let AllGroups = $(".AllGroups");
+//    let noGroups = $(".noGroups");
+//    let checkGroupCount = AllGroups.children()[0].childElementCount;
+//    if (checkGroupCount > 1) {
 //        noGroups.addClass("d-none")
 //    }
 });

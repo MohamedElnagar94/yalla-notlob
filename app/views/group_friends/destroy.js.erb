@@ -1,0 +1,6 @@
+$(".removeFriendFromGroup").bind('ajax:success', function(e) {
+
+     $(this).parent().parent().parent().fadeOut();
+     $(this).parent().parent().parent().remove();
+
+ });

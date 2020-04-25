@@ -1,0 +1,33 @@
+<%= content_for :page_title,"orders" %>
+<%= render 'navbar/navbar' %>
+<h1>New Orders</h1>
+<h2>Add order</h2>
+
+<%= form_with scope: :order, url: orders_path,   local: true do |form| %>
+  
+    <p>
+      <%= form.label :order_for %><br>
+      <%= form.select :order_for, [ 'breakfast', 'lunch', 'dinner'] %>
+    </p>
+   
+    <p>
+        <%= form.label :resturant_name %><br>
+        <%= form.text_field :resturant_name %>
+    </p>
+
+    <p>
+        <%= form.label :firends %><br>
+        <%= form.text_field :firend %>
+    </p>
+   
+
+    <p>
+        <%= form.label :picture %><br>
+        <%= form.file_field :image %>
+        
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

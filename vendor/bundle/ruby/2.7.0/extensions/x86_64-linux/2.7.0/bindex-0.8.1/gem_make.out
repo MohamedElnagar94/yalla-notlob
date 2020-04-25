@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-924zdrbindex-0.8.1/gems/bindex-0.8.1/ext/skiptrace
+/usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-1wnx584.rb extconf.rb
+creating Makefile
+
+current directory: /tmp/bundler20200419-10791-924zdrbindex-0.8.1/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20200419-10791-924zdrbindex-0.8.1/gems/bindex-0.8.1/ext/skiptrace
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-6sh1zp.rb extconf.rb
+creating Makefile
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-924zdrbindex-0.8.1/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200419-10791-pmzlez/skiptrace/internal
+=======
+current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -m 0755 cruby.so ./.gem.20200419-9429-k8ms3d/skiptrace/internal
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca

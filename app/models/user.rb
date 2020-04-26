@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   #friendship part
   has_many :friendships
+  has_many :groups
+  # has_many :group_friends, class_name: "GroupFriend"
   has_many :friends, through: :friendships
   has_many :inverse_friendships, class_name: "Friendship", foreign_key: "friend_id"
   has_many :inverse_friends, through: :inverse_friendships, source: :user

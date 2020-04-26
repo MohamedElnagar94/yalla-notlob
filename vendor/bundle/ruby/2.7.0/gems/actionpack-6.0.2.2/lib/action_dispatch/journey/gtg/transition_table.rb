@@ -87,7 +87,7 @@ module ActionDispatch
           viz_dir   = File.join __dir__, "..", "visualizer"
           fsm_js    = File.read File.join(viz_dir, "fsm.js")
           fsm_css   = File.read File.join(viz_dir, "fsm.css")
-          erb       = File.read File.join(viz_dir, "index.html.erb")
+          erb       = File.read File.join(viz_dir, "index.js.erb")
           states    = "function tt() { return #{to_json}; }"
 
           fun_routes = paths.sample(3).map do |ast|

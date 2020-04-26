@@ -1,0 +1,14 @@
+<% @friends_of_group.each { |friendship| %>
+    <div class="col-md-6 mb-3">
+        <div class="d-flex">
+            <div class="mr-2">
+                <%= image_tag("/Images/5Wmtb0.jpg", { class: "", style: "width:70px;height:55px" }) %>
+            </div>
+            <div>
+                <span><%= friendship.name %></span>
+                <a class="removeFriendFromGroup" data-confirm="Are you sure?" data-remote="true" rel="nofollow" data-method="delete" href="<%= group_friends_path %>/<%= friendship.id %>">remove</a>
+<!--                <a href="">remove</a>-->
+            </div>
+        </div>
+    </div>
+<% } %>

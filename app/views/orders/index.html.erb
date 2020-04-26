@@ -4,14 +4,13 @@
 
 <div class="container mt-5">
 
-<h2 class="mb-3"> Orders </h2>
+<h2 class="mb-3"> Orders <p> <a class="btn btn-outline-info" href="/orders/new"> New Order </a></p> </h2>
 <table class="table">
 <thead class="thead-dark">
   <tr>
     <th scope="col">#</th>
     <th scope="col">Order</th>
     <th scope="col">Resturants</th>
-    <th scope="col">Invited</th>
     <th scope="col">Status</th>
     <th scope="col">Action</th>
   </tr>
@@ -20,15 +19,20 @@
 
   <% @orders.each do |order| %>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">#</th>
       <td><%= order.order_for %></td>
       <td><%= order.resturant_name %></td>
-      <td></td>
-      <td>waiting...</td>
+      <td><%= order.status %></td>
       <td>
-        <input type="button" class="btn btn-outline-success" value="View" />
-        <input type="button" class="btn btn-outline-warning" value="Finish" />
-        <input type="button" class="btn btn-outline-danger" value="Cancel" />
+        <input type="button" class="btn btn-outline-success" value="View" onclick="window.location.href = '/orders/<%=  order.id %>';" />
+        <%= link_to 'Finish', order_path(order),
+            method: :put,
+            class: "btn btn-outline-warning" %>
+              
+        <%= link_to 'Cancel', order_path(order),
+            method: :delete,
+            class: "btn btn-outline-danger",
+            data: { confirm: 'Are you sure?!' } %>
       </td>
     </tr>
   <% end %>

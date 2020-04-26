@@ -30,11 +30,16 @@ class FriendshipsController < ApplicationController
     @x = params[:friendship]
     user_res = User.find_by_email(@x[:email])
 
+    if user_res.id == current_user.id
+      respond_to do |format|
+        redirect_to friendships_path
+        return
+      end
+    end
+
     if user_res
 
       friendship_res = Friendship.find_by(friend_id:user_res.id,user_id:current_user)
-      puts "3aaaaaaaaaaaaaaaa"
-      puts friendship_res
 
       if friendship_res == nil
         @friendship = current_user.friendships.build({friend_id: user_res.id})

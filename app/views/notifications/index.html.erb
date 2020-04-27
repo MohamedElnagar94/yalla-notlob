@@ -1,0 +1,30 @@
+
+<%= content_for :page_title,"Orders" %>
+<%= render 'navbar/navbar' %>
+
+<div class="container mt-5">
+
+<h2 class="mb-3"> Notifications </h2>
+<table class="table">
+<tbody>
+
+  <% @notifications.each do |notification| %>
+    <tr>
+      <th scope="row">#</th>
+      <td> You are invited to new order <td>
+        <input type="button" class="btn btn-outline-success" value="View" onclick="window.location.href = '/orders/<%=  notification.order_id %>';" />
+        
+        <%= link_to 'Accept', notification_path(notification),
+            method: :put,
+            class: "btn btn-outline-warning" %>
+              
+        <%= link_to 'Cancel', notification_path(notification),
+            method: :delete,
+            class: "btn btn-outline-danger",
+            data: { confirm: 'Are you sure?!' } %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>

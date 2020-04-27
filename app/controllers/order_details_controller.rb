@@ -5,13 +5,16 @@ class OrderDetailsController < ApplicationController
 
     def create
       @order_detail = OrderDetail.new(order_details_params)
-      @order_detail.user_id = 1 #login_user_id
-        
-      if @order_detail.save
-        redirect_to order_path	(@order_detail.order_id)
-      else
-          render 'new'
+      @order_detail.user_id = current_user.id
+      
+      @order_status = Order.find(@order_detail.order_id)
+
+      if @order_status.status == 'Open'
+        @order_detail.save
       end
+
+      redirect_to order_path	(@order_detail.order_id)
+    
     end
     
     def show

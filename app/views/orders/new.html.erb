@@ -29,10 +29,18 @@
 
     <div class="form-group">
       <label for="order_friends">Add Friends</label>
-      <select name="order[order_friends][]" class="form-control" multiple>        
+      <select name="order[order_groups][]" class="form-control" multiple>    
+          <optgroup label="Groups" class="m-2">
+          <% @groups.each do |g| %>
+            <option value="<%= g.id %>"><%= g.group_name %></option>
+          <% end %>
+        </optgroup>
+      </select>
+
+      <select name="order[order_friends][]" class="form-control" multiple>    
         <optgroup label="Friends" class="m-2">
-        <% @friendships.each do |friend| %>
-          <option value="<%= friend.id %>"><%= friend.email %></option>
+        <% @friendships.each do |f| %>
+          <option value="<%= f.id %>"><%= f.friend.email %></option>
         <% end %>
       </optgroup>
       </select>

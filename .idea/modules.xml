@@ -2,6 +2,34 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressable-2.7.0.iml" filepath="$PROJECT_DIR$/.idea/modules/addressable-2.7.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/better_errors-2.6.0.iml" filepath="$PROJECT_DIR$/.idea/modules/better_errors-2.6.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bindex-0.8.1.iml" filepath="$PROJECT_DIR$/.idea/modules/bindex-0.8.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/binding_of_caller-0.8.0.iml" filepath="$PROJECT_DIR$/.idea/modules/binding_of_caller-0.8.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bootsnap-1.4.6.iml" filepath="$PROJECT_DIR$/.idea/modules/bootsnap-1.4.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/childprocess-3.0.0.iml" filepath="$PROJECT_DIR$/.idea/modules/childprocess-3.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrent-ruby-1.1.6.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrent-ruby-1.1.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crass-1.0.6.iml" filepath="$PROJECT_DIR$/.idea/modules/crass-1.0.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debug_inspector-0.0.3.iml" filepath="$PROJECT_DIR$/.idea/modules/debug_inspector-0.0.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ffi-1.12.2.iml" filepath="$PROJECT_DIR$/.idea/modules/ffi-1.12.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jbuilder-2.10.0.iml" filepath="$PROJECT_DIR$/.idea/modules/jbuilder-2.10.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loofah-2.5.0.iml" filepath="$PROJECT_DIR$/.idea/modules/loofah-2.5.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/method_source-1.0.0.iml" filepath="$PROJECT_DIR$/.idea/modules/method_source-1.0.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mimemagic-0.3.4.iml" filepath="$PROJECT_DIR$/.idea/modules/mimemagic-0.3.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mini_mime-1.0.2.iml" filepath="$PROJECT_DIR$/.idea/modules/mini_mime-1.0.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mini_portile2-2.4.0.iml" filepath="$PROJECT_DIR$/.idea/modules/mini_portile2-2.4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nio4r-2.5.2.iml" filepath="$PROJECT_DIR$/.idea/modules/nio4r-2.5.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/public_suffix-4.0.4.iml" filepath="$PROJECT_DIR$/.idea/modules/public_suffix-4.0.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rack-proxy-0.6.5.iml" filepath="$PROJECT_DIR$/.idea/modules/rack-proxy-0.6.5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rake-13.0.1.iml" filepath="$PROJECT_DIR$/.idea/modules/rake-13.0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/regexp_parser-1.7.0.iml" filepath="$PROJECT_DIR$/.idea/modules/regexp_parser-1.7.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sassc-2.3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/sassc-2.3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sassc-rails-2.1.2.iml" filepath="$PROJECT_DIR$/.idea/modules/sassc-rails-2.1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/selenium-webdriver-3.142.7.iml" filepath="$PROJECT_DIR$/.idea/modules/selenium-webdriver-3.142.7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sqlite3-1.4.2.iml" filepath="$PROJECT_DIR$/.idea/modules/sqlite3-1.4.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/thread_safe-0.3.6.iml" filepath="$PROJECT_DIR$/.idea/modules/thread_safe-0.3.6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webdrivers-4.3.0.iml" filepath="$PROJECT_DIR$/.idea/modules/webdrivers-4.3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webpacker-4.2.2.iml" filepath="$PROJECT_DIR$/.idea/modules/webpacker-4.2.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/yalla_notlob.iml" filepath="$PROJECT_DIR$/.idea/yalla_notlob.iml" />
     </modules>
   </component>

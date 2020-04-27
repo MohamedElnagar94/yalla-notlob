@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
+topdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
+hdrdir = $(topdir)
+arch_hdrdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/usr/local/rvm/rubies/ruby-2.7.1
+=======
 topdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
 hdrdir = $(topdir)
 arch_hdrdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/home/eslam/.rvm/rubies/ruby-2.7.1
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
+sitearchdir = $(DESTDIR)./.gem.20200419-10791-1du69vt
+sitelibdir = $(DESTDIR)./.gem.20200419-10791-1du69vt
+=======
 sitearchdir = $(DESTDIR)./.gem.20200419-9429-1rqrn3i
 sitelibdir = $(DESTDIR)./.gem.20200419-9429-1rqrn3i
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -55,7 +69,11 @@ includedir = $(prefix)/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
+<<<<<<< HEAD
+sysconfdir = $(prefix)/etc
+=======
 sysconfdir = $(DESTDIR)/etc
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -65,12 +83,21 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
+<<<<<<< HEAD
+CC = gcc -std=gnu99
+CXX = g++
+LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
+LIBRUBYARG_SHARED = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+=======
 CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -81,7 +108,11 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = 
 optflags = -O3
 debugflags = -ggdb3
+<<<<<<< HEAD
+warnflags = -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+=======
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 cppflags = 
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC -I.. -Wall -O3 -g -std=gnu99 $(ARCH_FLAG)
@@ -115,8 +146,13 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir --ignore-fail-on-non-empty -p
+<<<<<<< HEAD
+MAKEDIRS = /usr/bin/mkdir -p
+INSTALL = /usr/bin/install -c
+=======
 MAKEDIRS = /bin/mkdir -p
 INSTALL = /usr/bin/install
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -141,7 +177,11 @@ LIBS = $(LIBRUBYARG_SHARED)  -lm   -lc
 ORIG_SRCS = buffer.c buffer_class.c extension_value_class.c factory_class.c packer.c packer_class.c packer_ext_registry.c rbinit.c rmem.c unpacker.c unpacker_class.c unpacker_ext_registry.c
 SRCS = $(ORIG_SRCS) 
 OBJS = buffer.o buffer_class.o extension_value_class.o factory_class.o packer.o packer_class.o packer_ext_registry.o rbinit.o rmem.o unpacker.o unpacker_class.o unpacker_ext_registry.o
+<<<<<<< HEAD
+HDRS = $(srcdir)/buffer.h $(srcdir)/buffer_class.h $(srcdir)/compat.h $(srcdir)/extension_value_class.h $(srcdir)/factory_class.h $(srcdir)/packer.h $(srcdir)/packer_class.h $(srcdir)/packer_ext_registry.h $(srcdir)/rmem.h $(srcdir)/sysdep.h $(srcdir)/sysdep_endian.h $(srcdir)/sysdep_types.h $(srcdir)/unpacker.h $(srcdir)/unpacker_class.h $(srcdir)/unpacker_ext_registry.h
+=======
 HDRS = $(srcdir)/unpacker_ext_registry.h $(srcdir)/unpacker.h $(srcdir)/rmem.h $(srcdir)/buffer_class.h $(srcdir)/extension_value_class.h $(srcdir)/sysdep_types.h $(srcdir)/sysdep_endian.h $(srcdir)/unpacker_class.h $(srcdir)/factory_class.h $(srcdir)/buffer.h $(srcdir)/sysdep.h $(srcdir)/packer_class.h $(srcdir)/compat.h $(srcdir)/packer.h $(srcdir)/packer_ext_registry.h
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 LOCAL_HDRS = 
 TARGET = msgpack
 TARGET_NAME = msgpack

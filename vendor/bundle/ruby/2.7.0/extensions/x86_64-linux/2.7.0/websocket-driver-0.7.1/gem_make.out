@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-1e04ldtwebsocket-driver-0.7.1/gems/websocket-driver-0.7.1/ext/websocket-driver
+/usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-qiixv0.rb extconf.rb
+creating Makefile
+
+current directory: /tmp/bundler20200419-10791-1e04ldtwebsocket-driver-0.7.1/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20200419-10791-1e04ldtwebsocket-driver-0.7.1/gems/websocket-driver-0.7.1/ext/websocket-driver
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.1/ext/websocket-driver
 /home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-b75ta2.rb extconf.rb
 creating Makefile
@@ -6,10 +16,17 @@ current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0
 make "DESTDIR=" clean
 
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 make "DESTDIR="
 compiling websocket_mask.c
 linking shared-object websocket_mask.so
 
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-1e04ldtwebsocket-driver-0.7.1/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20200419-10791-1xtkbup
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.1/ext/websocket-driver
 make "DESTDIR=" install
 /usr/bin/install -m 0755 websocket_mask.so ./.gem.20200419-9429-rrge59
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca

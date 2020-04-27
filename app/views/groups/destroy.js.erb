@@ -1,0 +1,11 @@
+$(".deleteGroup").bind('ajax:success', function(e) {
+//     let AllGroups = $(".AllGroups");
+//     let noGroups = $(".noGroups");
+//     let checkGroupCount = AllGroups.children()[0].childElementCount;
+//     if(checkGroupCount <= 1){
+//         noGroups.removeClass("d-none")
+//     }
+     $(this).closest('tr').fadeOut();
+     $(this).closest('tr').remove();
+    $('.listOfGroupFriends').html("<%= j (render partial: 'group_friends/listGroup') %>")
+ });

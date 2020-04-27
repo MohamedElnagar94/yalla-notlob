@@ -5,6 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
+  #friendship part
+  has_many :friendships
+  has_many :groups
+  # has_many :group_friends, class_name: "GroupFriend"
+  has_many :friends, through: :friendships
+
+
   def self.create_from_provider_data(provider_data)
     where(provider: provider_data.provider, uid: provider_data.uid).first_or_create do |user|
       user.email = provider_data.info.email

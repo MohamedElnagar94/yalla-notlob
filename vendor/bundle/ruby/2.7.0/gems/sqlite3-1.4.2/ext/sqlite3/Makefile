@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
+topdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
+hdrdir = $(topdir)
+arch_hdrdir = /usr/local/rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/usr/local/rvm/rubies/ruby-2.7.1
+=======
 topdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0
 hdrdir = $(topdir)
 arch_hdrdir = /home/eslam/.rvm/rubies/ruby-2.7.1/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/home/eslam/.rvm/rubies/ruby-2.7.1
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
+sitearchdir = $(DESTDIR)./.gem.20200419-10791-1ubn8e9
+sitelibdir = $(DESTDIR)./.gem.20200419-10791-1ubn8e9
+=======
 sitearchdir = $(DESTDIR)./.gem.20200419-9429-22oz5y
 sitelibdir = $(DESTDIR)./.gem.20200419-9429-22oz5y
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -55,7 +69,11 @@ includedir = $(prefix)/include
 runstatedir = $(localstatedir)/run
 localstatedir = $(prefix)/var
 sharedstatedir = $(prefix)/com
+<<<<<<< HEAD
+sysconfdir = $(prefix)/etc
+=======
 sysconfdir = $(DESTDIR)/etc
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 datadir = $(datarootdir)
 datarootdir = $(prefix)/share
 libexecdir = $(exec_prefix)/libexec
@@ -65,12 +83,21 @@ archdir = $(rubyarchdir)
 
 
 CC_WRAPPER = 
+<<<<<<< HEAD
+CC = gcc -std=gnu99
+CXX = g++
+LIBRUBY = $(LIBRUBY_SO)
+LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
+LIBRUBYARG_SHARED = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -Wl,-rpath,$(libdir) -L$(libdir) -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+=======
 CC = gcc
 CXX = g++
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -Wl,-rpath,'$${ORIGIN}/../lib' -Wl,-rpath,'$${ORIGIN}/../lib' -l$(RUBY_SO_NAME)-static $(MAINLIBS)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
@@ -81,13 +108,21 @@ cflags   = $(optflags) $(debugflags) $(warnflags)
 cxxflags = 
 optflags = -O3
 debugflags = -ggdb3
+<<<<<<< HEAD
+warnflags = -Wall -Wextra -Wdeprecated-declarations -Wimplicit-function-declaration -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+=======
 warnflags = -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 cppflags = 
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC  $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
 DEFS     = 
+<<<<<<< HEAD
+CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64  $(DEFS) $(cppflags)
+=======
 CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64  $(DEFS) $(cppflags)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 CXXFLAGS = $(CCDLFLAGS) -g -O2  $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic 
 dldflags = -Wl,--compress-debug-sections=zlib 
@@ -115,8 +150,13 @@ ruby_headers = $(hdrdir)/ruby.h $(hdrdir)/ruby/backward.h $(hdrdir)/ruby/ruby.h 
 RM = rm -f
 RM_RF = $(RUBY) -run -e rm -- -rf
 RMDIRS = rmdir --ignore-fail-on-non-empty -p
+<<<<<<< HEAD
+MAKEDIRS = /usr/bin/mkdir -p
+INSTALL = /usr/bin/install -c
+=======
 MAKEDIRS = /bin/mkdir -p
 INSTALL = /usr/bin/install
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 INSTALL_PROG = $(INSTALL) -m 0755
 INSTALL_DATA = $(INSTALL) -m 644
 COPY = cp
@@ -125,8 +165,13 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
+<<<<<<< HEAD
+libpath = . $(libdir) /opt/sqlite/sqlite3/lib
+LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/opt/sqlite/sqlite3/lib -Wl,-rpath,/opt/sqlite/sqlite3/lib
+=======
 libpath = . $(libdir)
 LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir)
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 DEFFILE = 
 
 CLEANFILES = mkmf.log
@@ -141,7 +186,11 @@ LIBS = $(LIBRUBYARG_SHARED) -lsqlite3 -ldl -lpthread  -lsqlite3 -lm   -lc
 ORIG_SRCS = aggregator.c backup.c database.c exception.c sqlite3.c statement.c
 SRCS = $(ORIG_SRCS) 
 OBJS = aggregator.o backup.o database.o exception.o sqlite3.o statement.o
+<<<<<<< HEAD
+HDRS = $(srcdir)/aggregator.h $(srcdir)/backup.h $(srcdir)/database.h $(srcdir)/exception.h $(srcdir)/sqlite3_ruby.h $(srcdir)/statement.h
+=======
 HDRS = $(srcdir)/sqlite3_ruby.h $(srcdir)/statement.h $(srcdir)/backup.h $(srcdir)/aggregator.h $(srcdir)/exception.h $(srcdir)/database.h
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 LOCAL_HDRS = 
 TARGET = sqlite3_native
 TARGET_NAME = sqlite3_native

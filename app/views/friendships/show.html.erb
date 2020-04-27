@@ -1,0 +1,28 @@
+<%= render 'navbar/navbar' %>
+
+<div class="container">
+  <div class="col-md-4 mb-3">
+    <div class="d-flex">
+        <div class="mr-2">
+            <img src="/Images/avatardefault.png" class=""
+                style="width:70px;height:55px" alt="avatar">
+        </div>
+        <div style="display: grid">
+          <div>
+            <p>
+              <strong>Name:</strong>
+              <%= @friendship.friend.name %>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>Email:</strong>
+              <%= @friendship.friend.email %>
+            </p>
+          </div>
+          <%= link_to 'Back', friendships_path, class:"btn btn-primary" %>
+        </div>
+    </div>
+  </div>
+</div>
+

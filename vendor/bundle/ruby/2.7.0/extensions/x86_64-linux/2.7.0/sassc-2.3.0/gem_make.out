@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-qkeadksassc-2.3.0/gems/sassc-2.3.0/ext
+/usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-1nm9m63.rb extconf.rb
+creating Makefile
+
+current directory: /tmp/bundler20200419-10791-qkeadksassc-2.3.0/gems/sassc-2.3.0/ext
+make "DESTDIR=" clean
+
+current directory: /tmp/bundler20200419-10791-qkeadksassc-2.3.0/gems/sassc-2.3.0/ext
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/sassc-2.3.0/ext
 /home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-brpp8u.rb extconf.rb
 creating Makefile
@@ -6,6 +16,7 @@ current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0
 make "DESTDIR=" clean
 
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/sassc-2.3.0/ext
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 make "DESTDIR="
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
@@ -73,6 +84,12 @@ compiling ./libsass/src/util_string.cpp
 compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-qkeadksassc-2.3.0/gems/sassc-2.3.0/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20200419-10791-j5i19t/sassc
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/sassc-2.3.0/ext
 make "DESTDIR=" install
 /usr/bin/install -m 0755 libsass.so ./.gem.20200419-9429-13rlv6q/sassc
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca

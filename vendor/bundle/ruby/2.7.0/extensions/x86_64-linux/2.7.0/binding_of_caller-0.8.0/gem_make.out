@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-wtgms2binding_of_caller-0.8.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/usr/local/rvm/rubies/ruby-2.7.1/bin/ruby -I /usr/local/rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-10791-1aqyltj.rb extconf.rb
+
+current directory: /tmp/bundler20200419-10791-wtgms2binding_of_caller-0.8.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /tmp/bundler20200419-10791-wtgms2binding_of_caller-0.8.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
 /home/eslam/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/eslam/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20200419-9429-2h05hb.rb extconf.rb
 
@@ -6,11 +16,16 @@ make "DESTDIR=" clean
 make: *** No rule to make target 'clean'.  Stop.
 
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 make "DESTDIR="
 echo "Nada."
 Nada.
 
+<<<<<<< HEAD
+current directory: /tmp/bundler20200419-10791-wtgms2binding_of_caller-0.8.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+=======
 current directory: /home/eslam/iti/project/yalla-notlob/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+>>>>>>> df7b605bd595180925c0bd01f280b3469f124eca
 make "DESTDIR=" install
 echo "Nada."
 Nada.

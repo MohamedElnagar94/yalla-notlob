@@ -43,6 +43,7 @@
     </div>
 </nav>
 <div class="container-fluid offset-4 col-4">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% flash.each do |name, message| %>
+<%= content_tag(:div,message, class: "alert alert-info #{name}") %>
+<% end %> 
 </div>

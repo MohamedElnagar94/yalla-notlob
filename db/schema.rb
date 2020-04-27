@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_04_27_184338) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "order_details", force: :cascade do |t|
     t.integer "order_id"
     t.integer "user_id"
@@ -76,6 +77,8 @@ ActiveRecord::Schema.define(version: 2020_04_27_184338) do
     t.boolean "notify"
   end
 
+=======
+>>>>>>> abcaa3ce78eb903e0025eb888ac4633450edcdf2
   create_table "orders", force: :cascade do |t|
     t.string "order_for"
     t.text "resturant_name"

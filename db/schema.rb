@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_23_124931) do
+ActiveRecord::Schema.define(version: 2020_04_27_184338) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,25 @@ ActiveRecord::Schema.define(version: 2020_04_23_124931) do
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
+  create_table "order_details", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "user_id"
+    t.string "item"
+    t.integer "amount"
+    t.text "desc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "price"
+  end
+
+  create_table "order_users", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "notify"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string "order_for"
     t.text "resturant_name"
@@ -64,6 +83,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_124931) do
     t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
   end
 
   create_table "sessions", force: :cascade do |t|

@@ -1,28 +1,7 @@
-<%# if @groups %>
-<%# @groups %>
 <% @groups.each { |group| %>
     <tr class="">
         <td class="col-md-8"><a href="" class="groupName"><%= group.group_name %></a></td>
-<!--        <td class="col-md-2">-->
-            <%#= link_to 'Add Group', groups_path,remote: true,class: 'addFriends' do %>
-                <%#= fa_icon "user-plus", class: "text-success" %>
-            <%# end %>
-<!--        </td>-->
-<!--        <td class="col-md-2"><a href="" class="addFriends"><%#= fa_icon "user-plus", class: "text-success" %></a>-->
-<!--        </td>-->
         <td class="col-md-2"><a class="addFriends" data-remote="true" rel="nofollow" data-method="get" href="<%= group_friends_path %>/<%= group.id %>"><%= fa_icon "user-plus",class: "text-success" %></a></td>
-<!--        <td class="col-md-2"><a class="addFriends" data-remote="true" rel="nofollow" data-method="post" href=""><%#= fa_icon "user-plus", class: "text-success" %></a></td>-->
         <td class="col-md-2"><a data-confirm="Are you sure?" class="deleteGroup" data-remote="true" rel="nofollow" data-method="delete" href="groups/<%= group.id %>"><%= fa_icon "trash",class: "text-danger" %></a></td>
-<!--        <td class="col-md-2"><%#= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'deleteGroup' %></a></td>-->
-<!--        <td class="col-md-2"><a href="" class="deleteGroup"><%#= fa_icon "trash",class: "text-danger" %></a></td>-->
     </tr>
 <% } %>
-<%# end %>
-<!--<script>-->
-<!--    $(".buttonAddGroup").on("click",function () {-->
-<!--        setTimeout(function(){-->
-
-<!--        $(".inputGroup").val("");-->
-<!--        },2000)-->
-<!--    })-->
-<!--</script>-->

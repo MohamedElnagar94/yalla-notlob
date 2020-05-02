@@ -1,33 +1,53 @@
 <%= content_for :page_title,"orders" %>
 <%= render 'navbar/navbar' %>
-<h1>New Orders</h1>
-<h2>Add order</h2>
+<div class="row">
+  <div class="container">
+    <div class="col-md-8">
+    <h2 class="mt-2 mb-2"> Create New Order </h2>
+    <%= form_with scope: :order, url: orders_path,   local: true do %>
+      <div class="form-group">
+        <label for="order_for">Order</label>
+        <select name="order[order_for]" class="form-control">
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Fast Food">Fast Food</option>
+        </select>
+      </div>
 
-<%= form_with scope: :order, url: orders_path,   local: true do |form| %>
-  
-    <p>
-      <%= form.label :order_for %><br>
-      <%= form.select :order_for, [ 'breakfast', 'lunch', 'dinner'] %>
-    </p>
-   
-    <p>
-        <%= form.label :resturant_name %><br>
-        <%= form.text_field :resturant_name %>
-    </p>
+    <div class="form-group">
+      <label for="resturant_name">Resturant</label>
+      <input type="text" name="order[resturant_name]" class="form-control" id="resturant_name">
+    </div>
 
-    <p>
-        <%= form.label :firends %><br>
-        <%= form.text_field :firend %>
-    </p>
-   
+    <div class="form-group">
+      <label for="picture">Upload Menu</label>
+      <br/>
+      <input type="file" name="order[picture]" id="picture">
+      <br/>
+    </div>
 
-    <p>
-        <%= form.label :picture %><br>
-        <%= form.file_field :image %>
-        
-    </p>
+    <div class="form-group">
+      <label for="order_friends">Add Friends</label>
+      <select name="order[order_groups][]" class="form-control" multiple>    
+          <optgroup label="Groups" class="m-2">
+          <% @groups.each do |g| %>
+            <option value="<%= g.id %>"><%= g.group_name %></option>
+          <% end %>
+        </optgroup>
+      </select>
 
-    <p>
-      <%= form.submit %>
-    </p>
-  <% end %>
+      <select name="order[order_friends][]" class="form-control" multiple>    
+        <optgroup label="Friends" class="m-2">
+        <% @friendships.each do |f| %>
+          <option value="<%= f.id %>"><%= f.friend.email %></option>
+        <% end %>
+      </optgroup>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <% end %>
+    </div>
+  </div>
+</div>

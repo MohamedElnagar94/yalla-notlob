@@ -7,5 +7,5 @@ $(".deleteGroup").bind('ajax:success', function(e) {
 //     }
      $(this).closest('tr').fadeOut();
      $(this).closest('tr').remove();
-    $('.listOfGroupFriends').html("<%= j (render partial: 'group_friends/listGroup') %>")
+    $('.listOfGroupFriends').html("<%= j(render partial: 'group_friends/listGroup') %>")
  });

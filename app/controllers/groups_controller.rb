@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
     @group = Group.new(params[:group].permit(:group_name,:user_id))
     @group.save
-    @groups = Group.all
+    @groups = Group.select('*').where("user_id = #{current_user.id}")
     # respond_to do |format|
     # if @group.save
     #   respond_to do |format|

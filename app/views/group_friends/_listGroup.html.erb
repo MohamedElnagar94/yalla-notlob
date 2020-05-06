@@ -12,9 +12,9 @@
                         </thead>
                         <tbody class="w-100">
                         <% @friends.each { |friend| %>
-                            <tr class="friendUserList" id="<%= friend.id %>" data-group="<%= @user_group.id %>">
+                            <tr class="friendUserList" id="<%= friend.id %>-<%= @user_group.id %>" data-group="<%= @user_group.id %>">
                                 <td class="w-100">
-                                    <a class="addFriendsToGroup" data-remote="true" rel="nofollow" data-method="post" href="<%= group_friends_path(:friends => { :friendship_id => friend.id,:group_id => @user_group.id}) %>"><%= friend.name %></a>
+                                    <a class="addFriendsToGroup" data-remote="true" rel="nofollow" data-method="post" href="<%= group_friends_path(:friends => { :friendship_id => friend.id,:group_id => @user_group.id,:csrf => csrf_meta_tag}) %>"><%= friend.name %></a>
                                 </td>
                             </tr>
                         <% } %>

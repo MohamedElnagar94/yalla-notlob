@@ -12,14 +12,17 @@
                         <div class="card-header">Latest Order</div>
                         <div class="mt-4" style="overflow-y: auto;max-height: 240px">
                             <table class="AllGroups">
-                                <tr class="noOrders d-none">
-                                    <td>There is no Orders</td>
-                                </tr>
+                                <% if @order.length > 0 %>
                                 <% @order.each {|order| %>
                                 <tr class="">
                                     <td><a class="ShowOrder" rel="nofollow" href="<%= orders_path+'/'+order.id.to_s %>"><%= order.order_for %> on <%= order.created_at.strftime("%d/%m/%Y") %></a></td>
                                 </tr>
                                 <% } %>
+                                <% else %>
+                                    <tr class="noOrders">
+                                        <td>There is no Orders</td>
+                                    </tr>
+                                <% end %>
                             </table>
                         </div>
                     </div>
@@ -31,12 +34,17 @@
                         <div class="card-header">Friends Activity</div>
                         <div class="mt-4" style="overflow-y: auto;max-height: 240px">
                             <table class="AllGroups">
-                                <tr class="noOrders d-none">
-                                    <td>There is no Orders</td>
-                                </tr>
-<!--                                <tr class="">-->
-<!--                                    <td><a class="ShowOrder" rel="nofollow" href="<%#= orders_path %>">launch on 13/9/2019</a></td>-->
-<!--                                </tr>-->
+                                <% if @friends_order.length > 0 %>
+                                    <% @friends_order.each {|activity| %>
+                                    <tr class="">
+                                        <td><span class="ShowOrder"><span style="text-decoration: underline;color: blue"><%= activity.name %></span> has created an order for <span style="text-decoration: underline;color: blue"><%= activity.order_for %></span> from <span style="text-decoration: underline;color: blue"><%= activity.resturant_name %></span></span></td>
+                                    </tr>
+                                    <% } %>
+                                <% else %>
+                                    <tr class="noOrders">
+                                        <td>There is no Orders</td>
+                                    </tr>
+                                <% end %>
                             </table>
                         </div>
                     </div>
